@@ -10,7 +10,7 @@
 
     {{-- CSRF TOKEN --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="AdminLTE3/plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="AdminLTE3/DataTables/media/css/jquery.dataTables.min.css">
         <!-- DataTables -->
         <link rel="stylesheet" href="AdminLTE3/DataTables/extensions/RowGroup/css/rowGroup.bootstrap.min.css">
+    <!-- Sweetalert2 -->
+    <script src="sweetalert2/sweetalert2.min.css"></script>
+    @include('sweet::alert')
     
 </head>
 
@@ -77,8 +80,10 @@
     </div>
     <!-- ./wrapper -->
 
-    <!-- jQuery -->
-    <script src="AdminLTE3/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery 3 -->
+    <script src="jquery/dist/jquery.min.js"></script>
+    {{-- <script src="AdminLTE3/plugins/jquery/jquery.min.js"></script> --}}
+
     <!-- Bootstrap 4 -->
     <script src="AdminLTE3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
@@ -89,6 +94,10 @@
     <script src="AdminLTE3/DataTables/media/js/jquery.dataTables.min.js"></script>
         <!-- DataTables RowGrouping-->
         <script src="AdminLTE3/DataTables/extensions/RowGroup/js/dataTables.rowGroup.min.js"></script>
+    <!-- Sweetalert2 -->
+    <script src="sweetalert2/sweetalert2.all.min.js"></script>
+    <!-- Editing js -->
+    <script src="js/modal.js"></script>
     
     
     @stack('script')

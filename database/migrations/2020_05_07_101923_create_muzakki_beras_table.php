@@ -18,7 +18,7 @@ class CreateMuzakkiBerasTable extends Migration
             $table->string('nama',200);
             $table->string('alamat',200);
             $table->string('rt',5);
-            $table->integer('jumlahBeras');
+            $table->float('jumlahBeras');
             $table->string('keterangan',200)->nullable();
             $table->timestamps();
             $table->softDeletes();
