@@ -15,7 +15,7 @@
                 data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
        with font-awesome or any other icon font library -->
-                <li class="nav-header">MENU UTAMA</li>                        
+                <li class="nav-header">TAMBAH DATA</li>                        
                 <li class="nav-item">
                     <a href={{route('muzakki.index')}} class="nav-link">
                         <i class="nav-icon far fa-plus-square"></i>
@@ -24,16 +24,34 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href={{route('muzakki.index')}} class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Tambah Mustahiq<br>(Penerima Zakat)</p>
+                    <a href={{route('mustahik.index')}} class="nav-link">
+                        <i class="nav-icon far fa-plus-square"></i>
+                        <p>Tambah Mustahik<br>(Penerima Zakat)</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="../gallery.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Hitung Pembagian Zakat</p>
+                <li class="nav-header">PENGHITUNGAN</li>                        
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Pembagian Zakat
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href={{route('penghitungan.index')}} class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Penghitungan Zakat</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../UI/icons.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Hasil Penghitungan</p>
+                            </a>
+                        </li>                        
+                    </ul>
                 </li>
                 
             </ul>

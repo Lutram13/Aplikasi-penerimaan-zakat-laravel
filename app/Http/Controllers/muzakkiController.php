@@ -36,6 +36,9 @@ class muzakkiController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required|string|max:255',
+            'alamat' => 'required',
+            'rt' => 'required',
+            'jumlahBeras' => 'required',
         ]);
 
         $model = muzakkiBeras::create([
@@ -64,7 +67,9 @@ class muzakkiController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required|string|max:255',
-            // 'email' => 'required|string|email|max:255|unique:pelanggans,email,' . $id
+            'alamat' => 'required',
+            'rt' => 'required',
+            'jumlahBeras' => 'required',
         ]);
 
         $model = muzakkiBeras::findOrFail($id);
@@ -85,7 +90,7 @@ class muzakkiController extends Controller
         $model = muzakkiBeras::query();
         return DataTables::of($model)
             ->addColumn('aksi', function ($model) {
-                return view('page.muzakki._action', [
+                return view('page._action', [
                     'model' => $model,
                     'url_show' => route('muzakki.beras.show', $model->id),
                     'url_edit' => route('muzakki.beras.edit', $model->id),
@@ -108,7 +113,10 @@ class muzakkiController extends Controller
     public function storeUang(Request $request)
     {
         $this->validate($request, [
-            // 'namaMuzakki' => 'required|string|max:255',
+            'nama' => 'required|string|max:255',
+            'alamat' => 'required',
+            'rt' => 'required',
+            'jumlahUang' => 'required',
         ]);
 
         $model = muzakkiUang::create([
@@ -137,7 +145,9 @@ class muzakkiController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required|string|max:255',
-            // 'email' => 'required|string|email|max:255|unique:pelanggans,email,' . $id
+            'alamat' => 'required',
+            'rt' => 'required',
+            'jumlahUang' => 'required',
         ]);
 
         $model = muzakkiUang::findOrFail($id);
@@ -158,7 +168,7 @@ class muzakkiController extends Controller
         $model = muzakkiUang::query();
         return DataTables::of($model)
             ->addColumn('aksi', function ($model) {
-                return view('page.muzakki._action', [
+                return view('page._action', [
                     'model' => $model,
                     'url_show' => route('muzakki.uang.show', $model->id),
                     'url_edit' => route('muzakki.uang.edit', $model->id),

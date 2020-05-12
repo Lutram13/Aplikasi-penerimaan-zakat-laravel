@@ -20,7 +20,7 @@
         <tr>
             <td>Jumlah Uang</td>
             <td> </td>
-            <td>{{ $model->jumlahUang }}</td>
+            <td>Rp {{number_format($model->jumlahUang,2,',','.')}}</td>
         </tr>
         <tr>
             <td>Keterangan</td>

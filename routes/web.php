@@ -41,5 +41,30 @@ Route::group(['prefix' => 'muzakki', 'as' => 'muzakki.'], function () {
     Route::put('/uang/update/{pesanan}', 'muzakkiController@updateUang')->name('uang.update'); 
     Route::delete('/uang/delete/{pesanan}', 'muzakkiController@destroyUang')->name('uang.destroy');
 
+});
 
+Route::group(['prefix' => 'mustahik', 'as' => 'mustahik.'], function () {    
+    Route::get('/', 'mustahikController@index')->name('index');
+    // Mustahik
+    Route::get('/tabel', 'mustahikController@dataTableMustahik')->name('tabel');
+    Route::post('/store', 'mustahikController@store')->name('store');
+    Route::get('/create', 'mustahikController@create')->name('create');
+    Route::get('/show/{pesanan}', 'mustahikController@show')->name('show');
+    Route::get('/edit/{pesanan}', 'mustahikController@edit')->name('edit'); 
+    Route::put('/update/{pesanan}', 'mustahikController@update')->name('update'); 
+    Route::delete('/delete/{pesanan}', 'mustahikController@destroy')->name('destroy');
+    
+});
+
+Route::group(['prefix' => 'penghitungan', 'as' => 'penghitungan.'], function () {    
+    Route::get('/', 'penghitunganController@index')->name('index');
+    // Mustahik
+    Route::get('/tabel', 'mustahikController@dataTableMustahik')->name('tabel');
+    Route::post('/store', 'mustahikController@store')->name('store');
+    Route::get('/create', 'mustahikController@create')->name('create');
+    Route::get('/show/{pesanan}', 'mustahikController@show')->name('show');
+    Route::get('/edit/{pesanan}', 'mustahikController@edit')->name('edit'); 
+    Route::put('/update/{pesanan}', 'mustahikController@update')->name('update'); 
+    Route::delete('/delete/{pesanan}', 'mustahikController@destroy')->name('destroy');
+    
 });

@@ -44,6 +44,9 @@ $("#modal-btn-save").click(function (event) {
             $("#datatableUang")
                 .DataTable()
                 .ajax.reload();
+            $("#datatable")
+                .DataTable()
+                .ajax.reload();
 
             swal({
                 type: "success",
@@ -59,7 +62,7 @@ $("#modal-btn-save").click(function (event) {
                         .closest(".form-group")
                         .addClass("has-error")
                         .append(
-                            '<span class="help-block"><strong>Maaf, kolom tidak boleh kosong</strong></span>'
+                            '<span class="help-block"><strong>Ups Maaf, kolom tidak boleh kosong !</strong></span>'
                         );
                 });
             }
@@ -98,6 +101,9 @@ $("body").on("click", ".btn-delete", function (event) {
                         .DataTable()
                         .ajax.reload();
                     $("#datatableBeras")
+                        .DataTable()
+                        .ajax.reload();
+                    $("#datatable")
                         .DataTable()
                         .ajax.reload();
                     swal({

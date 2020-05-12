@@ -33,7 +33,7 @@
     </div>
     <!-- /.card -->
 
-    @include('page.muzakki._modals')
+    @include('page._modals')
 
     {{-- Muzzaki Beras --}}
     <div class="card card-primary">
@@ -59,7 +59,7 @@
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
-        <h3 class="card-title text-right">Jumlah Beras Terkumpul : <b>{{number_format($jumlahBeras,1,',','.')}} Kg</b> <i>(Dari {{$jumlahMuzzakiBeras}} orang muzakki)</i></h3>
+        {{-- <h3 class="card-title text-right">Jumlah Beras Terkumpul : <b>{{number_format($jumlahBeras,1,',','.')}} Kg</b> <i>(Dari {{$jumlahMuzzakiBeras}} orang muzakki)</i></h3> --}}
         </div>
         <!-- /.card-footer-->
     </div>
@@ -88,7 +88,7 @@
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
-        <h3 class="card-title text-right">Jumlah Uang Terkumpul : <b>Rp {{number_format($jumlahUang,2,',','.')}} </b> <i>(Dari {{$jumlahMuzzakiUang}} orang muzakki)</i></h3>
+        {{-- <h3 class="card-title text-right">Jumlah Uang Terkumpul : <b>Rp {{number_format($jumlahUang,2,',','.')}} </b> <i>(Dari {{$jumlahMuzzakiUang}} orang muzakki)</i></h3> --}}
         </div>
         <!-- /.card-footer-->
     </div>
@@ -177,6 +177,12 @@
                 {data: 'keterangan', name: 'keterangan'},
                 {data: 'aksi', name: 'aksi', searchable: false, sortable: false, orderable : false,}
             ],
+            
+            order: [[2, 'asc']],
+            rowGroup: {
+                dataSrc: 'rt'
+            },
+
             columnDefs: [
                 { targets: [0,3], "width": "5%",
                     className: 'dt-center' 
