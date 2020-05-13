@@ -15,8 +15,8 @@
             'Riqab' => 'Riqab', 
             'Fisabilillah' => 'Fisabilillah', 
             'Mualaf' => 'Mualaf', 
-            'Ibnu Sabil' => 'Ibnu Sabil', 
-            'Amil Zakat' => 'Amil Zakat'], 
+            'Ibnu_Sabil' => 'Ibnu Sabil', 
+            'Amil_Zakat' => 'Amil Zakat'], 
             null, ['class' => 'form-control', 'id' => 'golongan', 'placeholder' => 'Pilih Golongan'])!!}
     </div>
     <div class="form-group">

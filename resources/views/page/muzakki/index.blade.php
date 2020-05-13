@@ -36,12 +36,12 @@
     @include('page._modals')
 
     {{-- Muzzaki Beras --}}
-    <div class="card card-primary">
+    <div class="card card-secondary">
         <div class="card-header">
             <h3 class="card-title">Daftar Zakat <b>Beras</b></h3>
         </div>
         <div class="card-body">
-            <table id="datatableBeras" class="table table-striped table-bordered table-hover" style="width:100%">
+            <table id="datatableBeras" class="table table-bordered table-hover" style="width:100%">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -65,12 +65,12 @@
     </div>
 
     {{-- Muzzaki Uang --}}
-    <div class="card card-success">
+    <div class="card card-secondary">
         <div class="card-header">
             <h3 class="card-title">Daftar Zakat <b>Uang</b></h3>
         </div>
         <div class="card-body">
-            <table id="datatableUang" class="table table-striped table-bordered table-hover" style="width:100%">
+            <table id="datatableUang" class="table table-bordered table-hover" style="width:100%">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -180,6 +180,12 @@
             
             order: [[2, 'asc']],
             rowGroup: {
+                startRender: function ( rows, group ) {
+                    
+    
+                    return $('<tr/>')
+                        .append( '<td colspan="7">RT 0'+group+'</td>' );
+                },
                 dataSrc: 'rt'
             },
 

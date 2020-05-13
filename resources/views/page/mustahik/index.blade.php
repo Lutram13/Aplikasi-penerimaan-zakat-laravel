@@ -22,7 +22,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-6">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered table-sm">
                         <thead>
                             <tr>
                                 <th style="width: 10px">#</th>
@@ -55,7 +55,7 @@
                     </table>
                 </div>
                 <div class="col-md-6">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered table-sm">
                         <thead>
                             <tr>
                                 <th style="width: 10px">#</th>
@@ -102,7 +102,7 @@
             <h3 class="card-title">Daftar <b>Mustahik</b></h3>
         </div>
         <div class="card-body">
-            <table id="datatable" class="table table-striped table-bordered table-hover" style="width:100%">
+            <table id="datatable" class="table table-bordered table-hover" style="width:100%">
                 <thead>
                     <tr>
                         <th>No</th>
